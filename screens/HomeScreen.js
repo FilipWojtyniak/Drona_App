@@ -1,31 +1,22 @@
-import { StyleSheet, Text, View, SafeAreaView,ImageBackground, Image, TouchableOpacity } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View, SafeAreaView,ImageBackground, Image, TouchableOpacity } from 'react-native';
+import React from 'react';
+import Baner from '../Constants/Baner';
+import { useNavigation } from '@react-navigation/core';
 
 const HomeScreen = () => {
+
+  const navigation = useNavigation();
+
+  const handleLearnButtonPress = () =>{
+
+    navigation.navigate('Product')
+
+  };
+
   return (
     <ImageBackground source={require('../assets/Background.jpg')} style={{width: '100%', height: '100%'}}>
       <SafeAreaView>
-      <View style={styles.container}>
-        <View style={styles.header}>
-          <View style={styles.logo}>
-            <Image source={require('../assets/LOGO.png')}/>
-            <View style={styles.buttonsContainer}>
-            <TouchableOpacity>           
-                <Image  source={require('../assets/HomeButton.png')}/>
-           </TouchableOpacity>
-           <TouchableOpacity>
-                <Image source={require('../assets/SearchButton.png')}/>
-           </TouchableOpacity>
-           <TouchableOpacity>           
-                <Image source={require('../assets/ProfileButton.png')}/>
-           </TouchableOpacity> 
-           <TouchableOpacity>           
-                <Image  source={require('../assets/MenuButton.png')}/>
-           </TouchableOpacity>          
-          </View>
-          </View>
-          </View>
-          </View>
+      <Baner/>
           <View style={styles.textContainer}>
             <Text style={styles.text}> The drones of </Text>
             <Text style={styles.text}> our future. </Text>
@@ -44,14 +35,14 @@ const HomeScreen = () => {
            </TouchableOpacity>
           </View>
           <View style={styles.learnButtonContainer}>
-           <TouchableOpacity style={styles.learnButton}>
+           <TouchableOpacity style={styles.learnButton} onPress={handleLearnButtonPress}>
              <Text style={styles.learnText}>Learn more</Text>           
            </TouchableOpacity>
           </View>
       </SafeAreaView>
     </ImageBackground>
   )
-}
+};
 
 export default HomeScreen
 
