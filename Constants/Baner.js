@@ -3,7 +3,6 @@ import React from 'react'
 
 function Baner () {
   return (
-    <View style={styles.container}>
     <View style={styles.header}>
       <View style={styles.logo}>
         <Image source={require('../assets/LOGO.png')}/>
@@ -22,8 +21,7 @@ function Baner () {
        </TouchableOpacity>          
       </View>
       </View>
-      </View>
-      </View>
+      </View>  
   )
 }
 export default Baner
@@ -33,6 +31,7 @@ const styles = StyleSheet.create({
         flex:1,
       },
       header:{
+      top: Platform.OS === 'ios' ? 0 : 25,
       width:'100%',
       height: 65,
       backgroundColor: 'rgba(255, 255, 255, 0.5)',
