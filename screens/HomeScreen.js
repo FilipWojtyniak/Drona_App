@@ -23,9 +23,9 @@ const HomeScreen = () => {
             <Text style={styles.text_2}> Amet minim mollit non deserunt </Text>
             <Text style={styles.text_2}> ullamco est sit aliqua dolor do  </Text>
             <Text style={styles.text_2}> amet sint. Velit officia consequat </Text>
-            <Text style={styles.text_2}> duis enim velit mollit.  </Text>
-            <Text style={styles.text_2}> Exercitation veniam consequat </Text>
-            <Text style={styles.text_2}> sunt nostrud amet.  </Text>
+            <Text style={styles.text_2}> duis enim velit mollit.</Text>
+            <Text style={styles.text_2}> Exercitation veniam consequat</Text>
+            <Text style={styles.text_2}> sunt nostrud amet.</Text>
           </View>
           </View>
           <View style={styles.buyButtonContainer}>

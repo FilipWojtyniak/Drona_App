@@ -1,22 +1,36 @@
-import { StyleSheet, TouchableOpacity, Image, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, TouchableOpacity, Image, View } from 'react-native';
+import React from 'react';
+import { useNavigation } from '@react-navigation/core';
+
 
 function Baner () {
+
+  const navigation = useNavigation();
+
+  const handleHomePress = () =>{
+    navigation.navigate('Home');
+  }
+
+  const handleDrawerPress = () =>{
+    navigation.openDrawer();
+  }
+ 
+
   return (
-    <View style={styles.header}>
+    <View style={styles.header}>  
       <View style={styles.logo}>
         <Image source={require('../assets/LOGO.png')}/>
         <View style={styles.buttonsContainer}>
-        <TouchableOpacity>           
+        <TouchableOpacity onPress={handleHomePress}>           
             <Image  source={require('../assets/HomeButton.png')}/>
        </TouchableOpacity>
-       <TouchableOpacity>
+       <TouchableOpacity >
             <Image source={require('../assets/SearchButton.png')}/>
        </TouchableOpacity>
        <TouchableOpacity>           
             <Image source={require('../assets/ProfileButton.png')}/>
        </TouchableOpacity> 
-       <TouchableOpacity>           
+       <TouchableOpacity onPress={handleDrawerPress}>           
             <Image  source={require('../assets/MenuButton.png')}/>
        </TouchableOpacity>          
       </View>
