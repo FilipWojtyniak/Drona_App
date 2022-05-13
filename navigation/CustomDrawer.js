@@ -27,7 +27,4 @@ const styles = StyleSheet.create({
     imageContainer:{
         margin: 20
     },
-    propsContainer:{
-        
-    }
 })

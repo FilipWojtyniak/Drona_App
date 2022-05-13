@@ -12,6 +12,10 @@ const HomeScreen = () => {
     navigation.navigate('Product');
   };
 
+  const handleBuyButtonPress = () => {
+    navigation.navigate('Buy');
+  }
+
   return (
     <ImageBackground source={require('../assets/Background.jpg')} style={{width: '100%', height: '100%'}}>
       <SafeAreaView>
@@ -29,7 +33,7 @@ const HomeScreen = () => {
           </View>
           </View>
           <View style={styles.buyButtonContainer}>
-           <TouchableOpacity style={styles.buyButton}>
+           <TouchableOpacity onPress={handleBuyButtonPress} style={styles.buyButton}>
              <Text style={styles.buyText}>Buy Now</Text>           
            </TouchableOpacity>
           </View>

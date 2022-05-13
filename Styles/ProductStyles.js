@@ -48,8 +48,7 @@ export const styles = StyleSheet.create({
     cartPrice:{
         fontSize:20,
         color: '#FFF',
-        fontWeight:'bold',
-        
+        fontWeight:'bold',      
     },
     comp:{
         flexDirection:'row',
