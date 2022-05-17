@@ -14,7 +14,7 @@ function LoginScreen() {
   useEffect(() => {
    const unsubscribe =  auth.onAuthStateChanged(user =>{
       if(user){
-        navigation.replace('Drawer');
+        navigation.replace('Review');
       }
     })
     return unsubscribe;
@@ -33,10 +33,10 @@ function LoginScreen() {
    auth.signInWithEmailAndPassword(email, password)
    .then(userCredentials =>{
      const user = userCredentials.user;
-     console.log('Logged', user.email);
    })
    .catch(error => alert(error.message))
  }
+
 
   return (
     <ImageBackground source={require('../assets/Background.jpg')} style={{width: '100%', height: '100%'}}>
@@ -71,7 +71,7 @@ function LoginScreen() {
   );
 }
 
-export default LoginScreen
+export default LoginScreen;
 
 const styles = StyleSheet.create({
   background:{
