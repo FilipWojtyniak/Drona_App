@@ -41,9 +41,6 @@ function Baner () {
 export default Baner
 
 const styles = StyleSheet.create({
-    container:{
-        flex:1,
-      },
       header:{
       top: Platform.OS === 'ios' ? 0 : 25,
       width:'100%',
